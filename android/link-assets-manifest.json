@@ -1,0 +1,25 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/resources/artwork.jpg",
+      "sha1": "8d9364f3dad8ae68788ba95762e8409efde5d3e2"
+    },
+    {
+      "path": "src/assets/resources/pure.m4a",
+      "sha1": "83acb2272277694608f7b9f7cf07e8965f9527ab"
+    },
+    {
+      "path": "src/assets/resources/tew-02.m4a",
+      "sha1": "4e26d738941f559f7fbd2909124935e831430cf7"
+    },
+    {
+      "path": "src/assets/resources/tew-art.jpg",
+      "sha1": "d4cdf22b8a019bf210b5845961aefe5fbba1e333"
+    },
+    {
+      "path": "src/assets/data/playlist.json",
+      "sha1": "292a27d85b9ecad72c5f3cbbdb8f2f23128ed4c5"
+    }
+  ]
+}
