@@ -16,12 +16,32 @@ import {QueueInitialTracksService, SetupService} from './src/services';
 import * as rssParser from 'react-native-rss-parser';
 
 const FEED_URL = 'https://media.rss.com/digitalfuturestold/feed.xml';
+const AUTHOR = 'Thomas Lodato';
 
 const App: React.FC = () => {
   const [rssFeed, setRSSFeed] = useState(null);
   const [rssTitle, setRSSTitle] = useState(null);
+  const [isFeedLoaded, setIsFeedLoaded] = useState(false);
   const track = useActiveTrack();
   const isPlayerReady = useSetupPlayer();
+
+  useEffect(() => {
+    if (rssFeed?.length > 0 && isPlayerReady && !isFeedLoaded) {
+      setIsFeedLoaded(true);
+      console.log('LOADING TRACKS');
+      rssFeed.forEach((item: object) => {
+        const track = {
+          url: item.enclosures[0].url,
+          title: item.title,
+          artist: item.itunes.author || AUTHOR,
+          artwork: item.itunes.image,
+          duration: item.itunes.duration,
+        };
+        // console.log(track);
+        TrackPlayer.add(track);
+      });
+    }
+  }, [rssFeed]);
 
   useEffect(() => {
     function deepLinkHandler(data: {url: string}) {
@@ -34,7 +54,7 @@ const App: React.FC = () => {
       const rss = await rssParser.parse(responseData);
       setRSSFeed(rss.items);
       setRSSTitle(rss.title);
-      console.log(rss.items[0].enclosures[0].url);
+      // console.log(rss.items[0].itunes.image);
     }
     fetchRSSFeed(FEED_URL);
 
