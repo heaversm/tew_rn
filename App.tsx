@@ -8,10 +8,14 @@ import {
   View,
   Text,
 } from 'react-native';
-import TrackPlayer, {useActiveTrack} from 'react-native-track-player';
+import TrackPlayer, {useActiveTrack, Event} from 'react-native-track-player';
 
 import {Button, PlayerControls, Progress, TrackInfo} from './src/components';
-import {QueueInitialTracksService, SetupService} from './src/services';
+import {
+  QueueInitialTracksService,
+  SetupService,
+  PlaybackService,
+} from './src/services';
 //import {SetupService} from './src/services';
 import * as rssParser from 'react-native-rss-parser';
 
@@ -28,7 +32,6 @@ const App: React.FC = () => {
   useEffect(() => {
     if (rssFeed?.length > 0 && isPlayerReady && !isFeedLoaded) {
       setIsFeedLoaded(true);
-      console.log('LOADING TRACKS');
       rssFeed.forEach((item: object) => {
         const track = {
           url: item.enclosures[0].url,
@@ -104,6 +107,7 @@ function useSetupPlayer() {
     let unmounted = false;
     (async () => {
       await SetupService();
+      await PlaybackService();
       if (unmounted) {
         return;
       }

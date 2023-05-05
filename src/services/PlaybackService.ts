@@ -58,7 +58,9 @@ export async function PlaybackService() {
 
   TrackPlayer.addEventListener(
     Event.PlaybackMetadataReceived,
-    async ({title, artist}) => {
+    async ({title, artist, source}) => {
+      //currently available: source, title, url, artist, album, date, genre
+      console.log('source', source); //id3
       const activeTrack = await TrackPlayer.getActiveTrack();
       TrackPlayer.updateNowPlayingMetadata({
         artist: [title, artist].filter(Boolean).join(' - '),
