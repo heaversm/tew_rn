@@ -329,6 +329,9 @@ PODS:
   - React-jsinspector (0.71.7)
   - React-logger (0.71.7):
     - glog
+  - react-native-file-access (2.6.0):
+    - React-Core
+    - ZIPFoundation (= 0.9.11)
   - react-native-slider (4.4.2):
     - React-Core
   - react-native-track-player (3.2.0-170bb4cbe5938d455406c7293afe1d4824c8c644):
@@ -423,6 +426,7 @@ PODS:
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
     - Yoga (~> 1.14)
+  - ZIPFoundation (0.9.11)
 
 DEPENDENCIES:
   - boost (from `../node_modules/react-native/third-party-podspecs/boost.podspec`)
@@ -470,6 +474,7 @@ DEPENDENCIES:
   - React-jsiexecutor (from `../node_modules/react-native/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
   - React-logger (from `../node_modules/react-native/ReactCommon/logger`)
+  - react-native-file-access (from `../node_modules/react-native-file-access`)
   - "react-native-slider (from `../node_modules/@react-native-community/slider`)"
   - react-native-track-player (from `../node_modules/react-native-track-player`)
   - React-perflogger (from `../node_modules/react-native/ReactCommon/reactperflogger`)
@@ -505,6 +510,7 @@ SPEC REPOS:
     - SocketRocket
     - SwiftAudioEx
     - YogaKit
+    - ZIPFoundation
 
 EXTERNAL SOURCES:
   boost:
@@ -547,6 +553,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/jsinspector"
   React-logger:
     :path: "../node_modules/react-native/ReactCommon/logger"
+  react-native-file-access:
+    :path: "../node_modules/react-native-file-access"
   react-native-slider:
     :path: "../node_modules/@react-native-community/slider"
   react-native-track-player:
@@ -614,6 +622,7 @@ SPEC CHECKSUMS:
   React-jsiexecutor: eaa5f71eb8f6861cf0e57f1a0f52aeb020d9e18e
   React-jsinspector: 9885f6f94d231b95a739ef7bb50536fb87ce7539
   React-logger: 3f8ebad1be1bf3299d1ab6d7f971802d7395c7ef
+  react-native-file-access: a4398950e02999b5ab97f3055feb7ee28e6615a3
   react-native-slider: 33b8d190b59d4f67a541061bb91775d53d617d9d
   react-native-track-player: 2e58fe64b9c160a5603937ff7e8d9b74725dd948
   React-perflogger: 2d505bbe298e3b7bacdd9e542b15535be07220f6
@@ -633,6 +642,7 @@ SPEC CHECKSUMS:
   SwiftAudioEx: f0fe8358a56794aab2df848e14b8e005e6743f7c
   Yoga: d56980c8914db0b51692f55533409e844b66133c
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
+  ZIPFoundation: b1f0de4eed33e74a676f76e12559ab6b75990197
 
 PODFILE CHECKSUM: 358d7e7eab9da262f5e101e1c907a60cf59d842d
 

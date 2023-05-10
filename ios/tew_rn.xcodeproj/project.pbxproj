@@ -12,14 +12,14 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		2230E4ABFF944297ACE59129 /* pure.m4a in Resources */ = {isa = PBXBuildFile; fileRef = B4AE107044514CB998176D9B /* pure.m4a */; };
+		2D9810111ED24949BBE0D01E /* tew-02.m4a in Resources */ = {isa = PBXBuildFile; fileRef = E1617E2691A7487DB440E2B6 /* tew-02.m4a */; };
 		7170989429F85AB000C8ECB6 /* dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7170989329F85AB000C8ECB6 /* dummy.swift */; };
 		7699B88040F8A987B510C191 /* libPods-tew_rn-tew_rnTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-tew_rn-tew_rnTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		8A15349E0BF248ACA804D825 /* playlist.json in Resources */ = {isa = PBXBuildFile; fileRef = C78380E4778A40B98DA95B9A /* playlist.json */; };
 		AAA3FC60BE0842A091C5B151 /* artwork.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B6662D9290C94E7BB4538E21 /* artwork.jpg */; };
-		2D9810111ED24949BBE0D01E /* tew-02.m4a in Resources */ = {isa = PBXBuildFile; fileRef = E1617E2691A7487DB440E2B6 /* tew-02.m4a */; };
 		B49A2EB892C248CFBADB0C5C /* tew-art.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 91C6407469254C24A6DB2242 /* tew-art.jpg */; };
-		2230E4ABFF944297ACE59129 /* pure.m4a in Resources */ = {isa = PBXBuildFile; fileRef = B4AE107044514CB998176D9B /* pure.m4a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,12 +51,12 @@
 		7170989329F85AB000C8ECB6 /* dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dummy.swift; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = tew_rn/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-tew_rn-tew_rnTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tew_rn-tew_rnTests.release.xcconfig"; path = "Target Support Files/Pods-tew_rn-tew_rnTests/Pods-tew_rn-tew_rnTests.release.xcconfig"; sourceTree = "<group>"; };
+		91C6407469254C24A6DB2242 /* tew-art.jpg */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "tew-art.jpg"; path = "../src/assets/resources/tew-art.jpg"; sourceTree = "<group>"; };
+		B4AE107044514CB998176D9B /* pure.m4a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = pure.m4a; path = ../src/assets/resources/pure.m4a; sourceTree = "<group>"; };
+		B6662D9290C94E7BB4538E21 /* artwork.jpg */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = artwork.jpg; path = ../src/assets/resources/artwork.jpg; sourceTree = "<group>"; };
+		C78380E4778A40B98DA95B9A /* playlist.json */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = playlist.json; path = ../src/assets/data/playlist.json; sourceTree = "<group>"; };
+		E1617E2691A7487DB440E2B6 /* tew-02.m4a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "tew-02.m4a"; path = "../src/assets/resources/tew-02.m4a"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		C78380E4778A40B98DA95B9A /* playlist.json */ = {isa = PBXFileReference; name = "playlist.json"; path = "../src/assets/data/playlist.json"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		B6662D9290C94E7BB4538E21 /* artwork.jpg */ = {isa = PBXFileReference; name = "artwork.jpg"; path = "../src/assets/resources/artwork.jpg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		E1617E2691A7487DB440E2B6 /* tew-02.m4a */ = {isa = PBXFileReference; name = "tew-02.m4a"; path = "../src/assets/resources/tew-02.m4a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		91C6407469254C24A6DB2242 /* tew-art.jpg */ = {isa = PBXFileReference; name = "tew-art.jpg"; path = "../src/assets/resources/tew-art.jpg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		B4AE107044514CB998176D9B /* pure.m4a */ = {isa = PBXFileReference; name = "pure.m4a"; path = "../src/assets/resources/pure.m4a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +119,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5F65E520E7754947B1658AB1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C78380E4778A40B98DA95B9A /* playlist.json */,
+				B6662D9290C94E7BB4538E21 /* artwork.jpg */,
+				E1617E2691A7487DB440E2B6 /* tew-02.m4a */,
+				91C6407469254C24A6DB2242 /* tew-art.jpg */,
+				B4AE107044514CB998176D9B /* pure.m4a */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,19 +175,6 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
-		};
-		5F65E520E7754947B1658AB1 /* Resources */ = {
-			isa = "PBXGroup";
-			children = (
-				C78380E4778A40B98DA95B9A /* playlist.json */,
-				B6662D9290C94E7BB4538E21 /* artwork.jpg */,
-				E1617E2691A7487DB440E2B6 /* tew-02.m4a */,
-				91C6407469254C24A6DB2242 /* tew-art.jpg */,
-				B4AE107044514CB998176D9B /* pure.m4a */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-			path = "";
 		};
 /* End PBXGroup section */
 

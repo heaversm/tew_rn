@@ -19,7 +19,10 @@ import {
 //import {SetupService} from './src/services';
 import * as rssParser from 'react-native-rss-parser';
 
+import {Dirs, FileSystem} from 'react-native-file-access';
+
 const FEED_URL = 'https://media.rss.com/digitalfuturestold/feed.xml';
+const FILE_URL = 'tew-02.m4a';
 const AUTHOR = 'Thomas Lodato';
 
 const App: React.FC = () => {
@@ -51,6 +54,13 @@ const App: React.FC = () => {
       console.log('deepLinkHandler', data.url);
     }
 
+    async function fetchLocalFile(fileURL: string) {
+      const filePath = Dirs.DocumentDir + '/' + fileURL;
+      console.log('filepath', filePath);
+      const text = await FileSystem.stat(filePath);
+      console.log('fileinfo', text);
+    }
+
     async function fetchRSSFeed(feedURL: string) {
       const response = await fetch(FEED_URL);
       const responseData = await response.text();
@@ -60,6 +70,7 @@ const App: React.FC = () => {
       // console.log(rss.items[0].itunes.image);
     }
     fetchRSSFeed(FEED_URL);
+    fetchLocalFile(FILE_URL);
 
     // This event will be fired when the app is already open and the notification is clicked
     const subscription = Linking.addEventListener('url', deepLinkHandler);
