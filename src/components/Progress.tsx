@@ -3,8 +3,43 @@ import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import TrackPlayer, {useProgress} from 'react-native-track-player';
 
-export const Progress: React.FC<{live?: boolean}> = ({live}) => {
+export const Progress: React.FC<{live?: boolean; radEvents?: any}> = ({
+  live,
+  radEvents,
+  // onTriggeredEvent,
+}) => {
+  function timeToSeconds(time) {
+    const [hours, minutes, seconds] = time.split(':').map(Number);
+    return hours * 3600 + minutes * 60 + seconds;
+  }
+
   const {position, duration} = useProgress();
+
+  const [triggeredEvents, setTriggeredEvents] = React.useState<any>([]);
+  const [currentEvent, setCurrentEvent] = React.useState<string>('');
+
+  const handlePlayerProgress = playerProgress => {
+    if (radEvents?.length > 0) {
+      for (const event of radEvents) {
+        const eventTime = timeToSeconds(event.eventTime);
+        if (
+          playerProgress >= eventTime &&
+          !triggeredEvents.includes(event.label)
+        ) {
+          setTriggeredEvents(prevEvents => [...prevEvents, event.label]);
+          const eventLabel =
+            event.label.charAt(0).toUpperCase() + event.label.slice(1);
+          const eventText = `Event Triggered: ${eventLabel}`;
+          setCurrentEvent(eventText);
+          //onTriggeredEvent(event.label);
+          //console.log(`Reached event '${event.label}' at ${eventTime} seconds`);
+        }
+      }
+    }
+  };
+
+  handlePlayerProgress(position);
+
   return live ? (
     <View style={styles.liveContainer}>
       <Text style={styles.liveText}>Live Stream</Text>
@@ -26,6 +61,9 @@ export const Progress: React.FC<{live?: boolean}> = ({live}) => {
         <Text style={styles.labelText}>
           {formatSeconds(Math.max(0, duration - position))}
         </Text>
+      </View>
+      <View>
+        <Text style={styles.labelText}>{currentEvent}</Text>
       </View>
     </>
   );

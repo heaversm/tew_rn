@@ -11,9 +11,12 @@
   },
   "dependencies": {
     "@react-native-community/slider": "^4.4.2",
+    "buffer": "^6.0.3",
+    "jsmediatags": "^3.9.7",
     "react": "18.2.0",
     "react-native": "0.71.7",
     "react-native-file-access": "^2.6.0",
+    "react-native-fs": "^2.20.0",
     "react-native-rss-parser": "^1.5.1",
     "react-native-track-player": "^3.2.0-170bb4cbe5938d455406c7293afe1d4824c8c644"
   },
