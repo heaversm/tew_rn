@@ -38,13 +38,24 @@ const App: React.FC = () => {
 
   const track = useActiveTrack();
   const isPlayerReady = useSetupPlayer();
+  //let triggeredEvent = useMemo(() => currentEvent, [currentEvent]); //MH - not sure what to do here
 
   const handleTriggeredEvent = newEvent => {
     console.log('Triggered event:', newEvent);
     if (currentEvent !== newEvent) {
       setCurrentEvent(newEvent);
+      //triggeredEvent = newEvent;
     }
   };
+
+  // const handleTriggeredEvent = useCallback(function handleTriggeredEvent(
+  //   newEvent: any,
+  // ) {
+  //   if (currentEvent !== newEvent) {
+  //     setCurrentEvent(newEvent);
+  //   }
+  // },
+  // []);
 
   useEffect(() => {
     if (rssFeed?.length > 0 && isPlayerReady && !isFeedLoaded) {
@@ -57,6 +68,7 @@ const App: React.FC = () => {
           artwork: item.itunes.image,
           duration: item.itunes.duration,
         };
+        // console.log(track);
         TrackPlayer.add(track);
       });
     }
@@ -80,6 +92,7 @@ const App: React.FC = () => {
       const rss = await rssParser.parse(responseData);
       setRSSFeed(rss.items);
       setRSSTitle(rss.title);
+      // console.log(rss.items[0].itunes.image);
     }
 
     async function fetchJSMediaTags(fileURL: string) {
@@ -173,7 +186,11 @@ const App: React.FC = () => {
       <StatusBar barStyle={'light-content'} />
       <View style={styles.contentContainer}>
         <TrackInfo track={track} />
-        <Progress live={track?.isLiveStream} radEvents={radEvents} />
+        <Progress
+          live={track?.isLiveStream}
+          radEvents={radEvents}
+          onTriggeredEvent={handleTriggeredEvent}
+        />
       </View>
       <View style={styles.actionRowContainer}>
         <PlayerControls />
