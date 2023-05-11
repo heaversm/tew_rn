@@ -173,11 +173,7 @@ const App: React.FC = () => {
       <StatusBar barStyle={'light-content'} />
       <View style={styles.contentContainer}>
         <TrackInfo track={track} />
-        <Progress
-          live={track?.isLiveStream}
-          radEvents={radEvents}
-          //onTriggeredEvent={handleTriggeredEvent}
-        />
+        <Progress live={track?.isLiveStream} radEvents={radEvents} />
       </View>
       <View style={styles.actionRowContainer}>
         <PlayerControls />
