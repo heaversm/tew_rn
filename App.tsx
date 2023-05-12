@@ -20,7 +20,7 @@ import {
 import * as rssParser from 'react-native-rss-parser';
 
 import {Dirs, FileSystem} from 'react-native-file-access';
-import jsmediatags from 'jsmediatags';
+import jsmediatags from '@avi-l/jsmediatags';
 
 const FEED_URL = 'https://media.rss.com/digitalfuturestold/feed.xml';
 // const FILE_URL = 'tew-02.m4a';
@@ -67,12 +67,14 @@ const App: React.FC = () => {
       console.log('deepLinkHandler', data.url);
     }
 
-    async function fetchLocalFile(fileURL: string) {
+    /*
+    async function fetchLocalFile(fileURL: string) { //gets file metadata (not media metadata)
       const filePath = Dirs.DocumentDir + '/' + fileURL;
       console.log('filepath', filePath);
       const text = await FileSystem.stat(filePath);
       console.log('fileinfo', text);
     }
+    */
 
     async function fetchRSSFeed(feedURL: string) {
       const response = await fetch(FEED_URL);
@@ -96,9 +98,8 @@ const App: React.FC = () => {
         });
       })
         .then(tagInfo => {
-          console.log('jsmediatag success');
           const customData = JSON.parse(tagInfo.tags.TXXX.data.data);
-          console.log(customData.remoteAudioData);
+          //console.log(customData.remoteAudioData);
           const radData = customData.remoteAudioData;
           if (radData) {
             if (radData.events) {
@@ -118,7 +119,7 @@ const App: React.FC = () => {
     }
 
     fetchRSSFeed(FEED_URL);
-    fetchLocalFile(FILE_URL);
+    // fetchLocalFile(FILE_URL);
     fetchJSMediaTags(FILE_URL);
 
     // This event will be fired when the app is already open and the notification is clicked

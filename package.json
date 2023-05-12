@@ -10,9 +10,9 @@
     "test": "jest"
   },
   "dependencies": {
+    "@avi-l/jsmediatags": "^3.9.8",
     "@react-native-community/slider": "^4.4.2",
     "buffer": "^6.0.3",
-    "jsmediatags": "^3.9.7",
     "react": "18.2.0",
     "react-native": "0.71.7",
     "react-native-file-access": "^2.6.0",
